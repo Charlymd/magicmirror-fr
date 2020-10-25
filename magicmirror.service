@@ -1,0 +1,14 @@
+[Unit]
+Description = application magic mirror 2
+After = network.target
+
+[Service]
+ExecStart=/usr/bin/npm start
+WorkingDirectory=/home/pi/MagicMirror/
+User=pi
+Type=simple
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy = multi-user.target
